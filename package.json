@@ -1,0 +1,23 @@
+{
+  "name": "food-truck",
+  "version": "1.0.0",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/brittanywiedow/food-truck.git"
+  },
+  "keywords": [],
+  "author": "Brittany Wiedow",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/brittanywiedow/food-truck/issues"
+  },
+  "homepage": "https://github.com/brittanywiedow/food-truck#readme",
+  "description": "Final Project",
+  "dependencies": {
+    "express": "^5.1.0"
+  }
+}
