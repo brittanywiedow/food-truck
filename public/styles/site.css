@@ -1,1 +1,256 @@
-/* Webpage CSS file */
+/* General Styles */
+html,
+body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    background-image: url('../img/tacobackground2.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+header {
+    background-color: black;
+    color: white;
+    padding: 1rem 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.header-content {
+    display: flex;
+    align-items: center;
+}
+
+.logo {
+    width: 100px;
+    height: auto;
+    margin-right: 1rem;
+    border-radius: 10px;
+}
+
+header h1 {
+    font-size: 2rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.taco-spinner {
+    font-size: 2rem;
+    animation: spin 4s linear infinite;
+}
+
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+/* Navigation */
+nav {
+    display: flex;
+    gap: 1rem;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+}
+
+nav a:hover {
+    background-color: goldenrod;
+}
+
+/* Main content layout*/
+.main-content {
+    flex: 1;
+    display: flex;
+    gap: 2rem;
+    padding: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    width: 100%;
+    align-items: stretch;
+    box-sizing: border-box;
+}
+
+/* Menu/Events */
+#menu,
+#events {
+    flex: 1 1 48%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 1.5rem;
+    border-radius: 8px;
+    background-color: whitesmoke;
+    opacity: 90%;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+    box-sizing: border-box;
+    animation: fadeInUp 1s ease forwards;
+    transform: translateY(20px);
+    opacity: 0;
+}
+
+#events {
+    animation-delay: 0.3s;
+}
+
+@keyframes fadeInUp {
+    to {
+        opacity: .9;
+        transform: translateY(0);
+    }
+}
+
+/* Footer */
+footer {
+    background-color: #201f1d;
+    color: white;
+    text-align: center;
+    padding: 1rem;
+    font-size: 1rem;
+    margin-top: auto;
+}
+
+footer a {
+    color: white;
+}
+
+footer a:hover {
+    color: goldenrod;
+}
+
+/* Taco animation on load */
+.taco-rain {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    pointer-events: none;
+    z-index: 9999;
+}
+
+.taco-rain span {
+    position: absolute;
+    top: -2rem;
+    font-size: 2rem;
+    animation-name: fall;
+    animation-duration: 5s;
+    animation-timing-function: linear;
+    animation-fill-mode: forwards;
+    opacity: 0.8;
+}
+
+.taco-rain span:nth-child(1) {
+    left: 10%;
+    animation-delay: 0s;
+}
+
+.taco-rain span:nth-child(2) {
+    left: 25%;
+    animation-delay: 0.5s;
+}
+
+.taco-rain span:nth-child(3) {
+    left: 40%;
+    animation-delay: 1s;
+}
+
+.taco-rain span:nth-child(4) {
+    left: 60%;
+    animation-delay: 1.5s;
+}
+
+.taco-rain span:nth-child(5) {
+    left: 75%;
+    animation-delay: 0.3s;
+}
+
+.taco-rain span:nth-child(6) {
+    left: 90%;
+    animation-delay: 0.8s;
+}
+
+@keyframes fall {
+    0% {
+        transform: translateY(0) rotate(0deg);
+        opacity: 1;
+    }
+
+    100% {
+        transform: translateY(100vh) rotate(360deg);
+        opacity: 0;
+    }
+}
+
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        padding: 0.5rem 1rem;
+    }
+
+    .header-content {
+        flex-direction: column;
+        align-items: center;
+        margin-bottom: 0.5rem;
+    }
+
+    .main-content {
+        flex-direction: column;
+    }
+
+    nav {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+
+    nav a {
+        padding: 0.25rem 0.5rem;
+        font-size: 0.9rem;
+    }
+
+    .logo {
+        width: 70px;
+        margin-bottom: 0.25rem;
+    }
+
+    header h1 {
+        font-size: 1.25rem;
+        line-height: 1.2;
+        margin: 0;
+    }
+
+    #menu,
+    #events {
+        flex: 1 1 100%;
+        width: 100%;
+    }
+}
