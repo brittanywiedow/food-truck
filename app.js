@@ -2,7 +2,21 @@
 const express = require ('express')
 const app = express()
 
-//Test Change - Comment (JLS)
+//Connect App to API (JLS)
+app.use('/api/v1/foodtruck', require('./routes/api/v1/foodtruck'))
+//find html object with items from API (JLS)
+const menu = document.getElementById('menu-items') //it's a div elm
+const events = document.getElementById('events-list') //it's a div elm
+
+const mp = document.createElement('p')
+const ep = document.createElement('p')
+
+mp.textContent = 'sample text'
+ep.textContent = 'sample text'
+
+menu.append(mp)
+events.append(ep)
+//---
 
 //5 Menu Items, Added to MongoDB 4/13/2025 (bw)
 const menuItems = 
