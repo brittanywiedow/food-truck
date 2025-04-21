@@ -1,6 +1,7 @@
 
 const { MongoClient, ObjectId } = require('mongodb')
 
+//check group message for the secrets/mongodb information 
 const { uri } = require('./secrets/mongodb.json')
 
 const client = new MongoClient(uri)

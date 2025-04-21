@@ -1,0 +1,41 @@
+### Variables
+@url= http://localhost:3000/api/v1/foodtruck
+@id = 3
+
+### Get all menu items 
+GET {{url}}/menu
+
+### Get all events 
+GET {{url}}/events
+
+### GET menu by id
+GET {{url}}/menu/{{id}}
+
+### GET event by id
+GET {{url}}/events/{{id}}
+
+### POST/ add new menu item 
+### I added this item in already so you will want to change the information for the db if you want to test it
+POST {{url}}/menu/add
+Content-Type: application/json
+
+{
+    "name": "Buffalo Cauliflower Taco",
+    "description": "Crispy cauliflower tossed in buffalo sauce, with vegan ranch slaw and pickled onions.",
+    "price": 6.25,
+    "imageURL": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTrmhq0hkFaGElYid-mSYRp_0vlxvxlVhtzMA&s",
+    "id": 6
+}
+
+### POST/ add new event item 
+### I added this item in already so you will want to change the information for the db if you want to test it
+POST {{url}}/events/add
+Content-Type: application/json
+
+{
+    "name": "National Night Out",
+    "location": "Peter's Park",
+    "date": "08-01-2025",
+    "time": "6:00 PM - 9:00 PM",
+    "id": 6
+}
