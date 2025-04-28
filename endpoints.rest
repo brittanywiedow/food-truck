@@ -16,6 +16,7 @@ GET {{url}}/events/{{id}}
 
 ### POST/ add new menu item 
 ### I added this item in already so you will want to change the information for the db if you want to test it
+### The issue was with "imageUrl", I capitalized URL.....now it is working... (bw)
 POST {{url}}/menu/add
 Content-Type: application/json
 
@@ -23,7 +24,7 @@ Content-Type: application/json
     "name": "Buffalo Cauliflower Taco",
     "description": "Crispy cauliflower tossed in buffalo sauce, with vegan ranch slaw and pickled onions.",
     "price": 6.25,
-    "imageURL": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTrmhq0hkFaGElYid-mSYRp_0vlxvxlVhtzMA&s",
+    "imageUrl": "https://pinchofyum.com/wp-content/uploads/Baked-Buffalo-Cauliflower-Tacos.jpg",
     "id": 6
 }
 

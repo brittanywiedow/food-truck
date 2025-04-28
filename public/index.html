@@ -19,28 +19,41 @@
                     <h1>Tasty Tacos Food Truck</h1>
                 </div>
                 <nav>
-                    <a href="#">Menu</a>
-                    <a href="#">Events</a>
-                    <a href="#">Contact</a>
-                </nav>
+                    <a href="admin.html" class="add-item-link">
+                      Add Item <span class="spinning-taco">🌮</span>
+                    </a>
+                </nav>                  
             </header>
-            <!-- <span class="taco-spinner">🌮</span>  -->
+   
             <main class="main-content">
-                <section id="menu">
-                    <h2>Our Menu</h2>
+                <section id="menu" class="section-card">
+                    <h1>Our Menu</h1>
                     <div id="menu-items" class="menu-grid">
-                        <!-- Menu items will be inserted here with JavaScript -->
+                        <!-- Menu items here -->
                     </div>
                 </section>
-                <section id="events">
-                    <h2>Upcoming Events</h2>
-                    <div id="events-list" class="events-grid">
-                        <!-- Events will be inserted here with JavaScript -->
-                    </div>
-                </section>
+            
+                <div class="event-container">
+
+                    <section id="events" class="section-card">
+                        <h2>Upcoming Events</h2>
+                        <div id="events-list" class="events-grid">
+                            <!-- Events here -->
+                        </div>
+                    </section>
+            
+                    <section id="eventinfo" class="section-card">
+                        <h2>Event Details</h2>
+                        <div id="event-info-content">
+                            <!-- Event info here -->
+                        </div>
+                    </section>
+                </div>
             </main>
+        
+            
             <footer>
-                <p>&copy; 2025 Tasty Tacos Truck 🌮 | Follow us on
+                <p>&copy; 2025 Tasty Tacos Truck | Follow us on
                     <a href=https://instagram.com target="_blank">Instagram</a> &
                     <a href=https://facebook.com target="_blank">Facebook</a>
                 </p>

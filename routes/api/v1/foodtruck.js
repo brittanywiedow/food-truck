@@ -7,11 +7,12 @@ const { getCollection } = require('../../../dbconnect')
 
 //POST - add menu item to db from JSON object
 //Added "id" and changed endpoint (bw) *tested and working
+//Altered code to get the imageUrl to work (bw)
 router.post('/menu/add', async (request, response) => {
-    //every menu item has a: name, description, price, imageURL
-    const { id, name, description, price, imageURL } = request.body
+    //every menu item has a: name, description, price, imageUrl, id
+    const { name, description, price, imageUrl, id } = request.body
     const collection = await getCollection('food-truck', 'Menu')
-    const { acknowledged, insertedId } = await collection.insertOne({ id, name, description, price, imageURL })
+    const { acknowledged, insertedId } = await collection.insertOne({ name, description, price, imageUrl, id })
     response.send({ acknowledged, insertedId })
 })
 
