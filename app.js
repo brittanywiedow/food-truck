@@ -12,6 +12,9 @@ app.use(express.json())
 // Allow us to respond with static webpages (bw)
 app.use(express.static('public'))
 
+// Connect static HTML routes (AJ)
+app.use('/', require('./routes/static'))
+
 //Connect App to API (JLS)
 app.use('/api/v1/foodtruck', require('./routes/api/v1/foodtruck'))
 
