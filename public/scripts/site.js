@@ -3,7 +3,6 @@
 const menu = document.getElementById('menu-items') //it's a div elm
 const events = document.getElementById('events-list') //it's a div elm
 
-
 // Commented these out because the code was creating an empty area with the "sample text" in it. (bw)
 // const mp = document.createElement('p')
 // const ep = document.createElement('p')
@@ -12,12 +11,12 @@ const events = document.getElementById('events-list') //it's a div elm
 // menu.append(mp)
 // events.append(ep)
 
-
 // Loading the menu items from API and display in the menu-items div (AJ)
 const callMenuItems = async () => {
+    const menuPlace = document.getElementById('menu-items')
+    if (!menuPlace) return  //Returns to start if element is empty
     const response = await fetch('/api/v1/foodtruck/menu')
     const menuItems = await response.json()
-    const menuPlace = document.getElementById('menu-items')
     //Loading each menu item that is in the database(AJ)
     menuItems.forEach(item => {
         const display = document.createElement('div')
@@ -32,8 +31,6 @@ const callMenuItems = async () => {
         menuPlace.appendChild(display)
     });
 }
-
-
 
 // Call event list and details (bw)
 // Also added map and "learn more" section that appears with event details (bw)
@@ -81,9 +78,11 @@ const callEventDetails = async (eventId) => {
 // Load events from Mongo and display on index.html (bw)
 // Was going to do it the same as the recipe example with Modal but since we decided to place it in a new area, I went a different route (bw)
 const callEvents = async () => {
+    const eventsPlace = document.getElementById('events-list')
+    if (!eventsPlace) return
+
     const response = await fetch('/api/v1/foodtruck/events')
     const events = await response.json()
-    const eventsPlace = document.getElementById('events-list')
     events.forEach(event => {
         const display = document.createElement('div')
         display.classList.add('event-item')

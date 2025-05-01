@@ -18,7 +18,6 @@ app.use('/', require('./routes/static'))
 //Connect App to API (JLS)
 app.use('/api/v1/foodtruck', require('./routes/api/v1/foodtruck'))
 
-
 //find html object with items from API (JLS) *Moved this code over to public/scripts/site.js (brower-side) (bw)
 
 
