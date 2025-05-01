@@ -21,6 +21,10 @@ const callMenuItems = async () => {
     menuItems.forEach(item => {
         const display = document.createElement('div')
         display.classList.add('menu-item')
+
+        //attempt at debugging (bw)
+        // console.log(item)
+
         //Displaying menu items in HTML(AJ)
         display.innerHTML = `
             <img src="${item.imageUrl}" alt="${item.name}" class="menu-img">

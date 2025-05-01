@@ -21,11 +21,11 @@ POST {{url}}/menu/add
 Content-Type: application/json
 
 {
-    "name": "Buffalo Cauliflower Taco",
-    "description": "Crispy cauliflower tossed in buffalo sauce, with vegan ranch slaw and pickled onions.",
-    "price": 6.25,
-    "imageUrl": "https://pinchofyum.com/wp-content/uploads/Baked-Buffalo-Cauliflower-Tacos.jpg",
-    "id": 6
+    "name": "Spicy Shrimp Taco",
+    "description": "Grilled shrimp marinated in chipotle lime sauce, topped with crunchy slaw and a drizzle of creamy cilantro aioli.",
+    "price": 7.50,
+    "imageUrl": "https://therecipecritic.com/wp-content/uploads/2022/12/shrimp_tacos-1.jpg",
+    "id": 7
 }
 
 ### POST/ add new event item 
@@ -34,9 +34,9 @@ POST {{url}}/events/add
 Content-Type: application/json
 
 {
-    "name": "National Night Out",
-    "location": "Peter's Park",
-    "date": "08-01-2025",
-    "time": "6:00 PM - 9:00 PM",
-    "id": 6
+    "name": "Pulling For Honor",
+    "location": "Appleton International Airport",
+    "date": "08-17-2025",
+    "time": "10:00 AM - 1:30 PM",
+    "id": 7
 }
