@@ -29,9 +29,10 @@ const callMenuItems = async () => {
         display.innerHTML = `
             <img src="${item.imageUrl}" alt="${item.name}" class="menu-img">
             <h3>${item.name}</h3>
-            <p>${item.description}</p>
-            <p class ="price">$${item.price.toFixed(2)}</p>
+            <p>${item.description}</p> 
+            <p class="price">$${Number(item.price).toFixed(2)}</p>
             `
+            // <p class ="price">$${item.price.toFixed(2)}</p>
         menuPlace.appendChild(display)
     });
 }
@@ -117,3 +118,5 @@ const callEvents = async () => {
     callMenuItems();
     callEvents();
 })()
+
+window.callMenuItems = callMenuItems //calling menu items again to refresh the updated list and push to admin to display (AJ)
